@@ -87,7 +87,7 @@
                 <form class="d-none d-md-flex ms-4">
                     <input class="form-control bg-dark border-0" type="search" placeholder="Search">
                 </form>
-                <a href="/" style="color: white; margin-left:8px">Continue Shopping!!</a>
+                <a href="/" style="color: white; margin-left:8px">Back to website!!</a>
 
                 <div class="navbar-nav align-items-center ms-auto">
                     <div class="nav-item dropdown">
