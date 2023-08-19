@@ -2,8 +2,8 @@
 <html>
 
 <head>
- 
- <!-- Basic -->
+
+  <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <!-- Mobile Metas -->
@@ -18,19 +18,17 @@
   <meta name="author" content="" />
 
   <title>Royal</title>
-     <!-- font awesome  -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- font awesome  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/bootstrap.css')}}" />
 
   <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:400,500&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:400,500&display=swap" rel="stylesheet" />
   <!-- Custom styles for this template -->
   <link href="{{ asset('/assets/css/style.css')}}" rel="stylesheet" />
   <!-- responsive style -->
@@ -47,8 +45,7 @@
             <img src="{{ asset('/assets/images/logo.jpeg')}}" alt="" />
           </div>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -57,8 +54,14 @@
             <li class="nav-item active">
               <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
             </li>
-              <li class="nav-item" >
+            <li class="nav-item">
               <a class="nav-link" href="/report/crime">Report Crime </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{Route('login')}}">Login </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{Route('register')}}">Register </a>
             </li>
             <!-- <li class="nav-item">
               <a class="nav-link" href="about.html">About Us </a>
@@ -77,9 +80,8 @@
             </li> -->
           </ul>
           <form class="form-inline my-2 my-lg-0">
-            
-            <input class="form-control nav_search-input mr-sm-2 d-none" type="search" placeholder="Search"
-              aria-label="Search" value="" />
+
+            <input class="form-control nav_search-input mr-sm-2 d-none" type="search" placeholder="Search" aria-label="Search" value="" />
             <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
           </form>
         </div>
@@ -101,7 +103,7 @@
           <div class="slider_box">
             <div class="fixed_company-detail">
               <p>
-              Nigria  Police Force
+                Nigria Police Force
               </p>
             </div>
             <div class="slider-detail">
@@ -110,13 +112,13 @@
                   We Are
                 </h2>
                 <h1>
-                NIGERIA POLICE FORCE
+                  NIGERIA POLICE FORCE
                 </h1>
               </div>
               <div class="slider_detail-text">
                 <p>
-                
-The Nigeria Police Force is the principal law enforcement and the lead security agency in Nigeria. Designated by the 1999 constitution as the national police of Nigeria with exclusive jurisdiction throughout the country. The structure of the Nigeria Police Force is provided for in section 214 (2)(a) and 215(2) of the 1999 Constitution
+
+                  The Nigeria Police Force is the principal law enforcement and the lead security agency in Nigeria. Designated by the 1999 constitution as the national police of Nigeria with exclusive jurisdiction throughout the country. The structure of the Nigeria Police Force is provided for in section 214 (2)(a) and 215(2) of the 1999 Constitution
 
                 </p>
               </div>
@@ -135,36 +137,36 @@ The Nigeria Police Force is the principal law enforcement and the lead security 
           <div class="slider_box">
             <div class="fixed_company-detail">
               <p>
-              Nigria  Police Force
+                Nigria Police Force
               </p>
             </div>
             <div class="slider-detail">
               <div class="slider_detail-heading">
                 <h2>
-                STRUCTURE OF THE NIGERIA POLICE FORCE
+                  STRUCTURE OF THE NIGERIA POLICE FORCE
 
                 </h2>
                 <h1>
-                Section 215 (2) of 1999 constitution states thus.
+                  Section 215 (2) of 1999 constitution states thus.
 
                 </h1>
               </div>
               <div class="slider_detail-text">
                 <p>
-                “The Nigeria Police Force shall be under the Command of the Inspector-General of Police and any contingents of the Nigeria Police Force stationed in a state shall; subject to the authority of the Inspector-General of Police, be under the command of Commissioner of Police of that state”
+                  “The Nigeria Police Force shall be under the Command of the Inspector-General of Police and any contingents of the Nigeria Police Force stationed in a state shall; subject to the authority of the Inspector-General of Police, be under the command of Commissioner of Police of that state”
 
-From the provisions above, three different structures in the Police Force can be identified. These are:-
+                  From the provisions above, three different structures in the Police Force can be identified. These are:-
 
-a. Command (Authority) Structure.
+                  a. Command (Authority) Structure.
 
-b. Administration structure and
+                  b. Administration structure and
 
-c. Organisation structure
+                  c. Organisation structure
 
                 </p>
               </div>
               <div class="slider_detail-btn">
-                
+
               </div>
             </div>
           </div>
@@ -173,27 +175,27 @@ c. Organisation structure
           <div class="slider_box">
             <div class="fixed_company-detail">
               <p>
-              Nigria  Police Force
+                Nigria Police Force
               </p>
             </div>
             <div class="slider-detail">
               <div class="slider_detail-heading">
                 <h2>
-                ADMINISTRATIVE STRUCTURE('D' DEPARTMENT:- INVESTIGATION AND INTELLIGENCE).
+                  ADMINISTRATIVE STRUCTURE('D' DEPARTMENT:- INVESTIGATION AND INTELLIGENCE).
 
                 </h2>
                 <h1>
-                The Nigeria Police is administratively structured and divided into six (7) departments: ‘A’ – ‘G’ with each department charged with peculiar duties.
+                  The Nigeria Police is administratively structured and divided into six (7) departments: ‘A’ – ‘G’ with each department charged with peculiar duties.
 
                 </h1>
               </div>
               <div class="slider_detail-text">
                 <p>
-                The 4th department under the administrative structure of the Nigeria police force is the 'D' department, in charge of investigation and intelligence. This department has one of it's branches that deals with criminal intelligence which has ananymous  crime Reporting as one of it's major method of information gathering which this web based app is basically for.
+                  The 4th department under the administrative structure of the Nigeria police force is the 'D' department, in charge of investigation and intelligence. This department has one of it's branches that deals with criminal intelligence which has ananymous crime Reporting as one of it's major method of information gathering which this web based app is basically for.
                 </p>
               </div>
               <div class="slider_detail-btn">
-               
+
               </div>
             </div>
           </div>
@@ -224,23 +226,23 @@ c. Organisation structure
         <div class=" col-md-6">
           <div class="welcome_detail">
             <h3 style="margin-top: 6rem;">
-            We are governed by the following  overriding principals irrespective of the circumstance: <br>
+              We are governed by the following overriding principals irrespective of the circumstance: <br>
             </h3>
             <!-- <h2>
               We are governed by the following  overriding principals irrespective of the circumstance:
             </h2> -->
             <h4 style="margin-top: 4rem;">
-           
-            <em>
-            <i class="fa fa-check" style="color:#0000ff; " ></i> Upholding the rule of law.  <br>
-            <i class="fa fa-check" style="color:#0000ff; " ></i>Respect for right of citizens .
-            <!-- <i class="fa-light fa-check" style="color:#0000ff; " ></i> Upholding the rule of law.
+
+              <em>
+                <i class="fa fa-check" style="color:#0000ff; "></i> Upholding the rule of law. <br>
+                <i class="fa fa-check" style="color:#0000ff; "></i>Respect for right of citizens .
+                <!-- <i class="fa-light fa-check" style="color:#0000ff; " ></i> Upholding the rule of law.
             <i class="fa-light fa-check" style="color:#0000ff; " ></i> Upholding the rule of law. -->
-           
-            </em>
+
+              </em>
             </h4>
             <div class="welcome_detail-btn">
-              
+
             </div>
           </div>
         </div>
@@ -275,7 +277,7 @@ c. Organisation structure
         </div>
       </div>
       <div class="service_btn">
-       
+
       </div>
     </div>
   </section>
@@ -315,7 +317,7 @@ c. Organisation structure
       </div>
     </div>
     <div class="security_btn">
-     
+
     </div>
   </section>
   <!-- end security section -->
@@ -347,7 +349,7 @@ c. Organisation structure
               search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved
               over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
             </p>
-           
+
           </div>
         </div>
       </div>
@@ -499,7 +501,7 @@ c. Organisation structure
   </script>
 
   <script>
-    $(".nav_search-btn").click(function () {
+    $(".nav_search-btn").click(function() {
       if ($(".nav_search-input").hasClass("d-none")) {
         event.preventDefault();
         $(".nav_search-input")
@@ -533,7 +535,7 @@ c. Organisation structure
         },
       });
 
-    //   var image = '{{ asset("/assets/images/maps-and-flags.png")}}';
+      //   var image = '{{ asset("/assets/images/maps-and-flags.png")}}';
       var image = '{{ asset("/assets/images/welcome.jpg")}}';
       var beachMarker = new google.maps.Marker({
         position: {
@@ -552,5 +554,6 @@ c. Organisation structure
 
 
 
-    </body>
+</body>
+
 </html>

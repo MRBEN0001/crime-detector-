@@ -28,12 +28,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/report/crime', [CrimeController::class, 'indexReportCrime']);
+    Route::get('/mail', [CrimeController::class, 'indexMail']);
+    Route::post('/store/crime', [CrimeController::class, 'storeReportedCrime']);
 });
 
 Route::get('/home', [CrimeController::class, 'index']);
-Route::get('/report/crime', [CrimeController::class, 'indexReportCrime']);
-Route::get('/mail', [CrimeController::class, 'indexMail']);
-Route::post('/store/crime', [CrimeController::class, 'storeReportedCrime']);
 
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
