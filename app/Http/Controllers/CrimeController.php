@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Support\Facades\Mail;
 
 use Illuminate\Support\Facades\Log;
@@ -19,10 +20,30 @@ class CrimeController extends Controller
     {
 
         return view('welcome');
-    }  public function indexMail()
+    }
+
+    public function crimeReportsIndex()
+    {
+        $reports = Crime::all();
+        return view('admin.crime-reports')->with('reports', $reports);
+
+    }
+    public function crimeReports()
+    {
+        $reports = Crime::all();
+        return view('admin.crimeReportsIndex')->with('reports', $reports);
+    }
+    public function reportDetails($id)
     {
 
+        $report = Crime::find($id);
        
+        return view("admin.report-details")->with("report", $report);
+    }
+    public function indexMail()
+    {
+
+
         return view('crime-mail-view');
     }
 
@@ -37,7 +58,7 @@ class CrimeController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function storeReportedCrime( CrimeFormRequest  $request)
+    public function storeReportedCrime(CrimeFormRequest  $request)
     {
 
         $user = Crime::firstOrCreate(
@@ -54,24 +75,28 @@ class CrimeController extends Controller
 
         if ($user->wasRecentlyCreated) {
             // Record was created
-            session()->flash('success', "Your report was successfully created, we will be at the crime scene in a giffy!");
-        } else {
+            session()->flash('success', "Your report was successfully created, we will be at the crime scene in a jiffy!");
+
+            try {
+                Mail::to("anenebenjaminjnr@outlook.com")->send(new CrimeMail([
+                    // "unique_id" => $vaccinated->unique_id,
+                    // "name" => $user->name,
+                    "crime" => $user->crime,
+                    "crime_scene" => $user->crime_scene,
+                    "crime_time" => $user->crime_time,
+                ]));
+            } catch (\Throwable $error) {
+                Log::error('SMTP network error: ' . $error->getMessage());
+            }
+
+        }
+        else {
             // Record already exists
-            session()->flash('warning', "You already reported this crime! ");
+            session()->flash('warning', "Your reported was not sent! ");
         }
 
 
-        try {
-            Mail::to("anenebenjaminjnr@outlook.com")->send(new CrimeMail([ 
-                // "unique_id" => $vaccinated->unique_id,
-                // "name" => $user->name,
-                "crime" => $user->crime,
-                 "crime_scene" => $user->crime_scene, 
-                 "crime_time" => $user->crime_time,
-            ]));
-        } catch (\Throwable $error) {
-            Log::error('SMTP network error: ' . $error->getMessage());
-        }
+      
 
         return redirect("/report/crime");
     }
@@ -108,4 +133,3 @@ class CrimeController extends Controller
         //
     }
 }
-

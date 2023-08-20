@@ -1,31 +1,63 @@
 @extends('layouts.admin')
 @section('content')
+
+@if(session('success'))
+<div style=" " class=" alert alert-success ">
+    {{ session('success') }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
+</div>
+@endif
+
+@if(session('warning'))
+<div style="" class=" alert alert-warning ">
+    {{ session('warning') }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
+</div>
+@endif
+
+
 <!-- Form Start -->
 <div class="container-fluid pt-4 px-4">
     <div class="row g-4">
         <div class="col-sm-12 col-xl-6">
             <div class="bg-secondary rounded h-100 p-4">
-                <h6 class="mb-4">New Category</h6>
+                <h6 class="mb-4"></h6>
 
-                <form action="" method="POST">
-
+                <form method="POST" action="/store/crime">
                     @csrf
                     <div class="mb-3">
-                        <label for="category" class="form-label">Category</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="category">
-                        <div id="category" class="form-text">
-                            Register a new product category.
-                        </div>
+                        <label for="exampleInputEmail1" class="form-label">Crime</label>
+                        <!-- <input style=" background:white;" type="text" class="form-control" id="" name="squadName" aria-describedby="emailHelp" required> -->
+                        <textarea name="crime" id="crime" aria-describedby="emailHelp"  class="form-control" cols="30" rows="5" required></textarea>
+                        @error('crime')
+                        <div class="error">{{ $message }}</div>
+                        @enderror
+                    </div> 
+                     <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Crime Scene</label>
+                        <input  type="text" class="form-control" id="crimeScene" name="crimeScene" aria-describedby="emailHelp" required>
+                        @error('crimeScene')
+                        <div class="error">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Crime TIme</label>
+                        <input  type="text" class="form-control" id="" name="crimeTime">
+                        @error('crimeTime')
+                        <div class="error">{{ $message }}</div>
+                        @enderror
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="submit" class="btn btn-primary">Create Squad</button>
                 </form>
             </div>
         </div>
 
-
     </div>
 </div>
 <!-- Form End -->
+
 
 @endsection
