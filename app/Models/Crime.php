@@ -8,12 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Crime extends Model
 {
     use HasFactory;
-    
+
     protected $fillable = [
-        'crime',
+        'subject',
+        'body',
         'crime_scene',
-        'crime_time'
-     
-   
+        'squad',
+        'status'
     ];
 }

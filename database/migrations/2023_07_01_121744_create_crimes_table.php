@@ -12,12 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('crimes', function (Blueprint $table) {
-            $table->id();   
-            $table->text("crime"); 
+            $table->id();
+            $table->string("subject");
+            $table->text("body");
             $table->string("crime_scene");
-            $table->string("crime_time");
             $table->string("squad")->nullable();
-            $table->string("status")->nullable();
+            $table->string("status")->default("Unattended");
             $table->timestamps();
         });
     }

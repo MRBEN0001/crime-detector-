@@ -28,27 +28,27 @@
                 <form method="POST" action="/store/crime">
                     @csrf
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Crime</label>
-                        <!-- <input style=" background:white;" type="text" class="form-control" id="" name="squadName" aria-describedby="emailHelp" required> -->
-                        <textarea name="crime" id="crime" aria-describedby="emailHelp"  class="form-control" cols="30" rows="5" required></textarea>
-                        @error('crime')
-                        <div class="error">{{ $message }}</div>
-                        @enderror
-                    </div> 
-                     <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Crime Subject</label>
+                        <input type="text" class="form-control" id="" name="subject" required>
+                    </div>
+
+                    <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Crime Scene</label>
-                        <input  type="text" class="form-control" id="crimeScene" name="crimeScene" aria-describedby="emailHelp" required>
+                        <input type="text" class="form-control" id="crimeScene" name="scene" aria-describedby="emailHelp" required>
                         @error('crimeScene')
                         <div class="error">{{ $message }}</div>
                         @enderror
                     </div>
+
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Crime TIme</label>
-                        <input  type="text" class="form-control" id="" name="crimeTime">
-                        @error('crimeTime')
+                        <label for="exampleInputEmail1" class="form-label">Crime Description</label>
+                        <!-- <input style=" background:white;" type="text" class="form-control" id="" name="squadName" aria-describedby="emailHelp" required> -->
+                        <textarea name="body" id="crime" aria-describedby="emailHelp" class="form-control" cols="30" rows="5" required></textarea>
+                        @error('crime')
                         <div class="error">{{ $message }}</div>
                         @enderror
                     </div>
+
 
                     <button type="submit" class="btn btn-primary">Create Squad</button>
                 </form>

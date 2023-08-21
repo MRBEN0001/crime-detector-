@@ -37,14 +37,14 @@ Route::middleware('auth')->group(function () {
 
     //crime reports
     Route::get('/crime/reports/index', [CrimeController::class, 'crimeReportsIndex'])->name('crime.reports.index');
-    Route::get('/view/{id}/details' , [CrimeController::class, 'reportDetails']);
+    Route::get('/view/{id}/details', [CrimeController::class, 'reportDetails']);
+    Route::post('/report/mobilize-team/{id}', [CrimeController::class, 'mobilize']);
 
 
-
-//SQUAD
-Route::get('/index/create/squad', [SquadController::class, 'createSquadIndex'])->name('index.create.squad');
-Route::post('/store/squad', [SquadController::class, 'storeSquad'])->name('store.squad');
-//REPORTS
+    //SQUAD
+    Route::get('/index/create/squad', [SquadController::class, 'createSquadIndex'])->name('index.create.squad');
+    Route::post('/store/squad', [SquadController::class, 'storeSquad'])->name('store.squad');
+    //REPORTS
 
 
 });

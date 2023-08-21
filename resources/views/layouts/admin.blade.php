@@ -63,8 +63,8 @@
                     @if(auth()->user()->phone === '12345')
                     <a href="/crime/reports/index" class="nav-item nav-link"><i class="fa fa-th me-2"></i>View Reports</a>
                     <a href="/index/create/squad" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Create Squad</a>
-                    <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Mobilize</a>
-                    <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Wishlist</a>
+                    <!-- <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Mobilize</a>
+                    <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Wishlist</a> -->
                     @else
                     <a href="/report/crime" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Report Crime</a>
                     @endif
@@ -132,7 +132,7 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <i class="fa fa-bell me-lg-2"></i>
-                            <span class="d-none d-lg-inline-flex">Notificatin</span>
+                            <span class="d-none d-lg-inline-flex">Notification</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
                             <a href="#" class="dropdown-item">
